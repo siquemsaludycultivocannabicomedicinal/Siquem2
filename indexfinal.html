@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siquem - Salud y Cultivo Cannábico</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      overflow: hidden;
+    }
+    .section {
+      display: none;
+      height: 100vh;
+      width: 100%;
+      padding: 40px;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+    }
+    .section.active {
+      display: flex;
+    }
+    h1, h2 {
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+    p {
+      max-width: 900px;
+      margin: 0 auto 15px;
+      line-height: 1.6;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      z-index: 10;
+    }
+    nav button {
+      background: none;
+      color: #fff;
+      border: none;
+      margin: 0 15px;
+      font-size: 1em;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    nav button:hover {
+      color: #f44336;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="showSection('inicio')">Inicio</button>
+    <button onclick="showSection('vision')">Nuestra Visión</button>
+    <button onclick="showSection('info')">Información</button>
+    <button onclick="showSection('contacto')">Contacto</button>
+  </nav>
+
+  <div id="inicio" class="section active">
+    <h1>Siquem - Salud y Cultivo Cannábico</h1>
+    <p><strong>DESCRIPCIÓN GENERAL:</strong><br>
+    Este proyecto tiene como objetivo la creación de un club de cannabis medicinal enfocado en el bienestar, la educación y el desarrollo comunitario. Nuestro propósito principal es ofrecer un espacio seguro, responsable y accesible para personas que buscan mejorar su calidad de vida a través del uso terapéutico del cannabis.</p>
+    <p>El club se basa en tres pilares fundamentales:<br>
+    - Servicio de calidad, brindando asesoramiento personalizado, productos controlados y acompañamiento profesional.<br>
+    - Información y educación, proporcionando contenido confiable, charlas, talleres y materiales formativos.<br>
+    - Compromiso social, promoviendo acciones comunitarias y bienestar integral.</p>
+    <p><strong>PROPÓSITO DEL CLUB:</strong><br>
+    Crear un espacio seguro, responsable y accesible donde las personas puedan mejorar su calidad de vida mediante el uso terapéutico del cannabis. Promover el bienestar, la educación confiable, y el compromiso social con acciones comunitarias.</p>
+    <p><strong>PÚBLICO OBJETIVO:</strong><br>
+    Personas adultas que buscan mejorar su salud y bienestar a través del cannabis terapéutico, cuidadores, profesionales y miembros de la comunidad interesados en la educación, el autocultivo y el uso responsable.</p>
+    <p><strong>MODELO DE CULTIVO:</strong><br>
+    - Tipo: Indoor, para mayor control y producción.<br>
+    - Ciclo: Cultivos escalonados para producción continua.<br>
+    - Capacitación: Buenas prácticas agrícolas, higiene, control de plagas y cosecha.</p>
+  </div>
+
+  <div id="vision" class="section">
+    <h2>Nuestra Visión</h2>
+    <p>Impulsamos la salud integral a través del autocultivo responsable y la educación sobre el cannabis medicinal. Promovemos el bienestar físico, mental y espiritual desde la raíz. Somos una comunidad que cultiva, aprende y comparte.</p>
+  </div>
+
+  <div id="info" class="section">
+    <h2>¿Qué vas a encontrar aquí?</h2>
+    <p>✅ Información educativa sobre cannabis medicinal<br>
+       ✅ Consejos de cultivo desde cero<br>
+       ✅ Herramientas para el bienestar<br>
+       ✅ Comunidad respetuosa y consciente</p>
+    <p>Actualizamos con técnicas, experiencias reales y recursos útiles para que puedas aprender y mejorar tu proceso de cultivo y uso medicinal de forma segura y efectiva.</p>
+  </div>
+
+  <div id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>📞 Llamadas: <a href="tel:+543854476091">3854476091</a><br>
+       💬 WhatsApp: <a href="https://wa.me/543854476091" target="_blank">3854476091</a><br>
+       📱 Telegram: <a href="https://t.me/3854476091" target="_blank">@3854476091</a><br>
+       📢 Canal: <a href="https://t.me/saludycultivocannabico" target="_blank">@saludycultivocannabico</a><br>
+       📧 Email: <a href="mailto:canal.siquem@gmail.com">canal.siquem@gmail.com</a>
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 Siquem - Salud y Cultivo Cannábico. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
